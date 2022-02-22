@@ -35,6 +35,8 @@ def forecasts(list_of_forecasts):
         desc = forecast['weather'][0]['description']
         wind_speed = forecast['wind']['speed']
         forecast_date = datetime.fromtimestamp(timestamp)
+        # I decided to use local time for the locations as I feel it would be more useful and understandable to end users
+
         # using the API request from weather_key method, this for statement looks through the API
         # and gathers the request information. information the API is stored as a list, and
         # all components are called upon like a list would be
