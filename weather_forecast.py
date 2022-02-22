@@ -9,6 +9,9 @@ import logging
 from datetime import datetime
 # import necessary libraries
 
+logging.basicConfig(filename='forecast_log.log', level=logging.DEBUG, format=f'%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+# line to configure error logging file
+
 def weather_key(city, country):
 
     key = os.environ.get('WEATHER_KEY') # get the key value stored in the WEATHER_KEY environment
